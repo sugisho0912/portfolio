@@ -1,0 +1,231 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+header {
+  position: relative;
+  margin: 0 auto;
+  max-width: 960px;
+  height: 270px;
+  margin-bottom: 30px;
+}
+
+.title {
+  position: absolute;
+  left: 0;
+  top: 105px;
+}
+
+header nav {
+  position: absolute;
+  right: 0;
+  bottom: 30px;
+  margin-bottom: 0;
+  border-top: none;
+}
+
+header nav li {
+  margin-left: 50px;
+  display: inline;
+  float: none;
+  border-bottom: none;
+  text-align: right;
+}
+
+ a {
+  display: inline;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  color: #333;
+  text-decoration: none;
+}
+
+.main-image {
+  margin-bottom: 80px;
+  text-align: center;
+  
+}
+.main-image img{
+  max-width: 960px;
+  height: auto;
+}
+
+.Movie {
+  width: 960px;
+  margin: 0 auto 150px auto;
+  padding: 0;
+}
+
+.Movie h2 {
+  margin-bottom: 65px;
+  font-size: 50px;
+  text-align: center;
+  line-height: 1.0;
+  font-weight: 100;
+}
+
+.Movie li {
+  width: 280px;
+  height: 260px;
+  margin-right: 30px;
+  box-sizing: border-box;
+  display: inline-block;
+  margin-bottom: 60px;
+  border: 1px solid #e0e0e0;
+  vertical-align: top;
+  text-align: center;
+  margin-left: 0;
+ object-fit : contain 
+}
+
+.Picture {
+  width: 960px;
+  margin: 0 auto 150px auto;
+  padding: 0;
+}
+
+.Picture h2 {
+  margin-bottom: 65px;
+  font-size: 50px;
+  text-align: center;
+  line-height: 1.0;
+  font-weight: 100;
+}
+
+.Picture li {
+  width: 280px;
+  height: 260px;
+  margin-right: 30px;
+  box-sizing: border-box;
+  display: inline-block;
+  margin-bottom: 60px;
+  border: 1px solid #e0e0e0;
+  vertical-align: top;
+  text-align: center;
+  margin-left: 0;
+}
+
+.main {
+  max-width: 960px;
+  padding: 0;
+  margin: 0 auto;
+}
+
+.main h2 {
+  text-align: left;
+  margin-bottom: 0;
+}
+
+.main-photo {
+  width: 920px;
+  margin: 0 auto 150px auto;
+  padding: 0;
+  display: flex;
+  /* この要素の内部の表示をフレキシブルに変更可能とする */
+  justify-content: space-between;
+  /* 内部要素を中央揃え */
+  align-items: center;
+}
+
+.profile-photo {
+  position: relative;
+  top: 50px;
+  /* 縁取り要素を追加する前に、親コンテナの配置方法を相対配置に変更 */
+}
+
+.circle1,
+.circle2,
+.circle3 {
+  position: absolute;
+  /* 縁取り要素は絶対配置 */
+  top: 0;
+  /* .profile-photoの開始位置と揃える */
+  width: 100%;
+  height: 100%;
+  border-radius: 40%;
+  /* 40%の角丸めで歪な形を作成しておく */
+  z-index: -1;
+  /* 画像と背景の間に重ねる */
+}
+
+/* rotationという名前のアニメーションを作成 */
+@keyframes rotation {
+  from {
+    /* 開始時点の装飾 */
+    transform: rotate(0deg);
+    /* 変形操作の内、回転0度 */
+  }
+
+  to {
+    /* 終了時点の装飾 */
+    transform: rotate(360deg);
+    /* 変形操作の内、回転360度 */
+  }
+}
+
+.circle1 {
+  opacity: 0.1;
+  /* 透明度 */
+  background: #ffff00;
+  /* 縁取りの色設定 */
+  transform-origin: 50% 47%;
+  /* transformの基準位置を変更 */
+  animation: rotation 5s infinite linear;
+  /* rotationアニメーションの秒数と繰り返し、変化を線形に変更 */
+}
+
+.circle2 {
+  opacity: 0.3;
+  background: #00ffff;
+  transform-origin: 52% 48%;
+  animation: rotation 12s infinite linear;
+}
+
+.circle3 {
+  opacity: 0.2;
+  background: #ff00ff;
+  transform-origin: 48% 52%;
+  animation: rotation 8s infinite linear;
+}
+
+.profile-photo img {
+  display: block;
+  /* 画像自体を箱として表示させる */
+  width: 300px;
+  /* 横幅の設定 */
+  height: 300px;
+  /* 高さの設定 */
+  border-radius: 50%;
+  /* 角丸を縦横のサイズの半分以上の値を指定することで正方形の画像は円にくり抜かれる、99999pxなどでもOK */
+}
+
+footer {
+	max-width: 960px;
+	margin: 50px auto;
+}
+footer nav {
+  right: 0;
+  bottom: 300px;
+  margin-bottom: auto;
+  border-top: none;
+}
+
+footer nav li {
+	margin-left: 50px;
+  display: inline;
+  float: none;
+  border-bottom: none;
+  text-align: left;
+}
+
+footer nav a {
+	font-size: 14px;
+	font-weight: 400;
+}
+
+
+
+
+
